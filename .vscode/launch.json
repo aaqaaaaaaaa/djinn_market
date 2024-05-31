@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Flutter (SM A107F)",
+            "program": "lib/main.dart",
+            "deviceId": "R9AMC06R45J",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}
