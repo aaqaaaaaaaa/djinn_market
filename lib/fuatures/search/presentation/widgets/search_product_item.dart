@@ -38,10 +38,10 @@ class SearchProductItem extends StatelessWidget {
               width: 48.w,
               decoration: BoxDecoration(
                   color: AppColors.white,
-                  image: DecorationImage(
-                    opacity: 0.5,
-                    image: AssetImage(Assets.images.onlineBuy),
-                  ),
+                  // image: DecorationImage(
+                  //   opacity: 0.5,
+                  //   image: AssetImage(Assets.images.onlineBuy),
+                  // ),
                   borderRadius: BorderRadius.circular(8.r)),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.r),
@@ -53,7 +53,7 @@ class SearchProductItem extends StatelessWidget {
                     child: Opacity(
                         opacity: 0.0,
                         child:
-                            SvgPicture.asset('assets/icons/logo_b_only.svg')),
+                            Image.asset(Assets.images.onlineBuy)),
                   )),
                 ),
               ),

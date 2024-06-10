@@ -164,7 +164,7 @@ class _ProductDetailState extends State<ProductDetail> {
                             false)
                           SliverToBoxAdapter(
                             child: Container(
-                              height: 178.h,
+                              height: 300.h,
                               width: MediaQuery.of(context).size.width,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10.r)),

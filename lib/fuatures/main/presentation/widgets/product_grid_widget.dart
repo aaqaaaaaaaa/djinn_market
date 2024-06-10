@@ -8,14 +8,11 @@ import 'package:bizda_bor/fuatures/auth/data/models/user_model.dart';
 import 'package:bizda_bor/fuatures/main/presentation/bloc/category/category_bloc.dart';
 import 'package:bizda_bor/generated/locale_keys.g.dart';
 import 'package:bizda_bor/services/get_products/data/models/product_model.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 class ProductItemBody extends StatefulWidget {
@@ -122,19 +119,18 @@ class _ProductItemBodyState extends State<ProductItemBody> {
                               blurRadius: 5.r)
                         ],
                         color: AppColors.white,
-                        image: const DecorationImage(
-                          opacity: 0.5,
-                          image: AssetImage('assets/images/logo_b_only.png'),
-                        ),
+                        // image: DecorationImage(
+                        //   opacity: 0.5,
+                        //   image: AssetImage(Assets.images.onlineBuy3),
+                        // ),
                         borderRadius: BorderRadius.circular(20.r),
                       ),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.r),
                         child: Image.network(
-                          (widget.product?.compressImage?.contains('https') ??
-                                  false)
-                              ? '${widget.product?.compressImage}'
-                              : 'https://bizda-bor.uz${widget.product?.compressImage}',
+                          (widget.product?.image?.contains('https') ?? false)
+                              ? '${widget.product?.image}'
+                              : 'https://jalolxon002.pythonanywhere.com${widget.product?.compressImage}',
                           errorBuilder: (context, url, error) {
                             return Container(
                                 height: 167.h,
